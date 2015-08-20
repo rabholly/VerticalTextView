@@ -50,8 +50,8 @@
 	CGContextTranslateCTM(context, 0, self.bounds.size.height);
 	CGContextScaleCTM(context, 1.0, -1.0);
 	
-	CGFloat centerOffset;
-	CGFloat offset;
+	CGFloat centerOffset = 0;
+	CGFloat offset = 0;
 	NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:_text
 																				attributes:@{NSForegroundColorAttributeName: [UIColor clearColor],NSFontAttributeName: _font}];
 	//计算居中的偏移
