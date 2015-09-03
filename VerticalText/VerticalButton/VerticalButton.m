@@ -22,14 +22,7 @@
 	if (!self) {
 		return nil;
 	}
-	label = [[VerticalLabel alloc] init];
-	label.frame = self.bounds;
-	label.aligment = VerticalTextAligmentCenter;
-	label.backgroundColor = [UIColor clearColor];
-	label.userInteractionEnabled = NO;
-	_highlightColor = [UIColor lightGrayColor];
-	[self addSubview:label];
-	self.backgroundColor = [UIColor clearColor];
+	[self initLabel];
 	return self;
 }
 
@@ -38,6 +31,12 @@
 	if (!self) {
 		return nil;
 	}
+	[self initLabel];
+	return self;
+
+}
+
+- (void)initLabel {
 	label = [[VerticalLabel alloc] init];
 	label.frame = self.bounds;
 	label.aligment = VerticalTextAligmentCenter;
@@ -46,8 +45,6 @@
 	_highlightColor = [UIColor lightGrayColor];
 	[self addSubview:label];
 	self.backgroundColor = [UIColor clearColor];
-	return self;
-
 }
 
 - (void)setText:(NSString *)text {
