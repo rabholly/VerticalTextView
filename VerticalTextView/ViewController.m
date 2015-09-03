@@ -35,6 +35,13 @@
 	rightText.text = @"我曾听人说过，当你不能够再拥有，你唯一可以做的，就是令自己不要忘记。";
 	rightText.backgroundColor = [UIColor greenColor];
 	[self.view addSubview:rightText];
+	
+	VerticalTextView *longText = [[VerticalTextView alloc] initWithFrame:CGRectMake(260, 40, 50, 200)];
+	longText.aligment = VerticalTextAligmentRight;
+	longText.text = @"我曾听人说过，当你不能够再拥有，你唯一可以做的，就是令自己不要忘记。";
+	longText.backgroundColor = [UIColor greenColor];
+	[self.view addSubview:longText];
+
 }
 
 - (void)didReceiveMemoryWarning {

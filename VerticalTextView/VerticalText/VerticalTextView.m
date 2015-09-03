@@ -128,7 +128,7 @@
 											   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
 											   context:nil];
 		if (strRect.size.height > length) {
-			subStr = [NSString stringWithFormat:@"%@…",[str substringWithRange:NSMakeRange(0, i - 2)]];
+			subStr = [NSString stringWithFormat:@" %@…",[str substringWithRange:NSMakeRange(0, i - 3)]];
 			return [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
 		}
 	}
