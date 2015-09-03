@@ -1,6 +1,6 @@
 //
-//  VerticalTextViewTests.m
-//  VerticalTextViewTests
+//  VerticalTextTests.m
+//  VerticalTextTests
 //
 //  Created by horry on 15/8/18.
 //  Copyright (c) 2015年 ___horryBear___. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface VerticalTextViewTests : XCTestCase
+@interface VerticalTextTests : XCTestCase
 
 @end
 
-@implementation VerticalTextViewTests
+@implementation VerticalTextTests
 
 - (void)setUp {
     [super setUp];

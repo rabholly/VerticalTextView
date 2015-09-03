@@ -13,8 +13,9 @@
 		8BA715221B82D53800D1E3E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA715201B82D53800D1E3E0 /* Main.storyboard */; };
 		8BA715241B82D53800D1E3E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA715231B82D53800D1E3E0 /* Images.xcassets */; };
 		8BA715271B82D53800D1E3E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA715251B82D53800D1E3E0 /* LaunchScreen.xib */; };
-		8BA715331B82D53800D1E3E0 /* VerticalTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA715321B82D53800D1E3E0 /* VerticalTextViewTests.m */; };
+		8BA715331B82D53800D1E3E0 /* VerticalTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */; };
 		8BA7153F1B82D59B00D1E3E0 /* VerticalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7153E1B82D59B00D1E3E0 /* VerticalTextView.m */; };
+		8BCCD5751B9861EA005E619A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCCD5741B9861EA005E619A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8BA715131B82D53800D1E3E0 /* VerticalTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA715131B82D53800D1E3E0 /* VerticalText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA715171B82D53800D1E3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA715181B82D53800D1E3E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BA7151A1B82D53800D1E3E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,11 +39,12 @@
 		8BA715211B82D53800D1E3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BA715231B82D53800D1E3E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BA715261B82D53800D1E3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8BA7152C1B82D53800D1E3E0 /* VerticalTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA7152C1B82D53800D1E3E0 /* VerticalTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA715311B82D53800D1E3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BA715321B82D53800D1E3E0 /* VerticalTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalTextViewTests.m; sourceTree = "<group>"; };
+		8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalTextTests.m; sourceTree = "<group>"; };
 		8BA7153D1B82D59B00D1E3E0 /* VerticalTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalTextView.h; path = VerticalText/VerticalTextView.h; sourceTree = "<group>"; };
 		8BA7153E1B82D59B00D1E3E0 /* VerticalTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerticalTextView.m; path = VerticalText/VerticalTextView.m; sourceTree = "<group>"; };
+		8BCCD5741B9861EA005E619A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,10 @@
 		8BA7150A1B82D53800D1E3E0 = {
 			isa = PBXGroup;
 			children = (
-				8BA715151B82D53800D1E3E0 /* VerticalTextView */,
-				8BA7152F1B82D53800D1E3E0 /* VerticalTextViewTests */,
+				8BCCD5741B9861EA005E619A /* Default-568h@2x.png */,
+				8BA715151B82D53800D1E3E0 /* VerticalText */,
+				8BA715301B82D53800D1E3E0 /* Supporting Files */,
+				8BA7152F1B82D53800D1E3E0 /* VerticalTextTests */,
 				8BA715141B82D53800D1E3E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +79,13 @@
 		8BA715141B82D53800D1E3E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BA715131B82D53800D1E3E0 /* VerticalTextView.app */,
-				8BA7152C1B82D53800D1E3E0 /* VerticalTextViewTests.xctest */,
+				8BA715131B82D53800D1E3E0 /* VerticalText.app */,
+				8BA7152C1B82D53800D1E3E0 /* VerticalTextTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BA715151B82D53800D1E3E0 /* VerticalTextView */ = {
+		8BA715151B82D53800D1E3E0 /* VerticalText */ = {
 			isa = PBXGroup;
 			children = (
 				8BA7153C1B82D54D00D1E3E0 /* VerticalText */,
@@ -94,7 +98,7 @@
 				8BA715251B82D53800D1E3E0 /* LaunchScreen.xib */,
 				8BA715161B82D53800D1E3E0 /* Supporting Files */,
 			);
-			path = VerticalTextView;
+			path = VerticalText;
 			sourceTree = "<group>";
 		};
 		8BA715161B82D53800D1E3E0 /* Supporting Files */ = {
@@ -106,13 +110,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8BA7152F1B82D53800D1E3E0 /* VerticalTextViewTests */ = {
+		8BA7152F1B82D53800D1E3E0 /* VerticalTextTests */ = {
 			isa = PBXGroup;
 			children = (
-				8BA715321B82D53800D1E3E0 /* VerticalTextViewTests.m */,
-				8BA715301B82D53800D1E3E0 /* Supporting Files */,
+				8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */,
 			);
-			path = VerticalTextViewTests;
+			path = VerticalTextTests;
 			sourceTree = "<group>";
 		};
 		8BA715301B82D53800D1E3E0 /* Supporting Files */ = {
@@ -121,6 +124,7 @@
 				8BA715311B82D53800D1E3E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = VerticalTextTests;
 			sourceTree = "<group>";
 		};
 		8BA7153C1B82D54D00D1E3E0 /* VerticalText */ = {
@@ -135,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BA715121B82D53800D1E3E0 /* VerticalTextView */ = {
+		8BA715121B82D53800D1E3E0 /* VerticalText */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BA715361B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextView" */;
+			buildConfigurationList = 8BA715361B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalText" */;
 			buildPhases = (
 				8BA7150F1B82D53800D1E3E0 /* Sources */,
 				8BA715101B82D53800D1E3E0 /* Frameworks */,
@@ -147,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = VerticalTextView;
+			name = VerticalText;
 			productName = VerticalTextView;
-			productReference = 8BA715131B82D53800D1E3E0 /* VerticalTextView.app */;
+			productReference = 8BA715131B82D53800D1E3E0 /* VerticalText.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8BA7152B1B82D53800D1E3E0 /* VerticalTextViewTests */ = {
+		8BA7152B1B82D53800D1E3E0 /* VerticalTextTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BA715391B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextViewTests" */;
+			buildConfigurationList = 8BA715391B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextTests" */;
 			buildPhases = (
 				8BA715281B82D53800D1E3E0 /* Sources */,
 				8BA715291B82D53800D1E3E0 /* Frameworks */,
@@ -165,9 +169,9 @@
 			dependencies = (
 				8BA7152E1B82D53800D1E3E0 /* PBXTargetDependency */,
 			);
-			name = VerticalTextViewTests;
+			name = VerticalTextTests;
 			productName = VerticalTextViewTests;
-			productReference = 8BA7152C1B82D53800D1E3E0 /* VerticalTextViewTests.xctest */;
+			productReference = 8BA7152C1B82D53800D1E3E0 /* VerticalTextTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8BA7150E1B82D53800D1E3E0 /* Build configuration list for PBXProject "VerticalTextView" */;
+			buildConfigurationList = 8BA7150E1B82D53800D1E3E0 /* Build configuration list for PBXProject "VerticalText" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -201,8 +205,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BA715121B82D53800D1E3E0 /* VerticalTextView */,
-				8BA7152B1B82D53800D1E3E0 /* VerticalTextViewTests */,
+				8BA715121B82D53800D1E3E0 /* VerticalText */,
+				8BA7152B1B82D53800D1E3E0 /* VerticalTextTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA715221B82D53800D1E3E0 /* Main.storyboard in Resources */,
+				8BCCD5751B9861EA005E619A /* Default-568h@2x.png in Resources */,
 				8BA715271B82D53800D1E3E0 /* LaunchScreen.xib in Resources */,
 				8BA715241B82D53800D1E3E0 /* Images.xcassets in Resources */,
 			);
@@ -243,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA715331B82D53800D1E3E0 /* VerticalTextViewTests.m in Sources */,
+				8BA715331B82D53800D1E3E0 /* VerticalTextTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +257,7 @@
 /* Begin PBXTargetDependency section */
 		8BA7152E1B82D53800D1E3E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8BA715121B82D53800D1E3E0 /* VerticalTextView */;
+			target = 8BA715121B82D53800D1E3E0 /* VerticalText */;
 			targetProxy = 8BA7152D1B82D53800D1E3E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -361,9 +366,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VerticalTextView/Info.plist;
+				INFOPLIST_FILE = VerticalText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VerticalText;
 			};
 			name = Debug;
 		};
@@ -371,9 +376,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VerticalTextView/Info.plist;
+				INFOPLIST_FILE = VerticalText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VerticalText;
 			};
 			name = Release;
 		};
@@ -389,10 +394,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = VerticalTextViewTests/Info.plist;
+				INFOPLIST_FILE = VerticalTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalTextView.app/VerticalTextView";
+				PRODUCT_NAME = VerticalTextTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalText.app/VerticalText";
 			};
 			name = Debug;
 		};
@@ -404,17 +409,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = VerticalTextViewTests/Info.plist;
+				INFOPLIST_FILE = VerticalTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalTextView.app/VerticalTextView";
+				PRODUCT_NAME = VerticalTextTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalText.app/VerticalText";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8BA7150E1B82D53800D1E3E0 /* Build configuration list for PBXProject "VerticalTextView" */ = {
+		8BA7150E1B82D53800D1E3E0 /* Build configuration list for PBXProject "VerticalText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BA715341B82D53800D1E3E0 /* Debug */,
@@ -423,21 +428,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BA715361B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextView" */ = {
+		8BA715361B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BA715371B82D53800D1E3E0 /* Debug */,
 				8BA715381B82D53800D1E3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		8BA715391B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextViewTests" */ = {
+		8BA715391B82D53800D1E3E0 /* Build configuration list for PBXNativeTarget "VerticalTextTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BA7153A1B82D53800D1E3E0 /* Debug */,
 				8BA7153B1B82D53800D1E3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
