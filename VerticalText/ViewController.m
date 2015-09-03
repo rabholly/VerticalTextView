@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VerticalLabel.h"
+#import "VerticalButton.h"
 
 @interface ViewController ()
 
@@ -41,7 +42,14 @@
 	longText.text = @"我曾听人说过，当你不能够再拥有，你唯一可以做的，就是令自己不要忘记。";
 	longText.backgroundColor = [UIColor greenColor];
 	[self.view addSubview:longText];
-
+	
+	VerticalButton *verticalButton1 = [[VerticalButton alloc] initWithFrame:CGRectMake(20, 460, 26, 40)];
+	verticalButton1.text = @"确定";
+	[self.view addSubview:verticalButton1];
+	
+	VerticalButton *verticalButton2 = [[VerticalButton alloc] initWithFrame:CGRectMake(100, 460, 26, 100)];
+	verticalButton2.text = @"【确定OK】";
+	[self.view addSubview:verticalButton2];
 }
 
 - (void)didReceiveMemoryWarning {

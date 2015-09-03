@@ -16,6 +16,7 @@
 		8BA715331B82D53800D1E3E0 /* VerticalTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */; };
 		8BCCD5751B9861EA005E619A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCCD5741B9861EA005E619A /* Default-568h@2x.png */; };
 		8BCCD57B1B986712005E619A /* VerticalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCD57A1B986712005E619A /* VerticalLabel.m */; };
+		8BCCD57F1B986864005E619A /* VerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCD57E1B986864005E619A /* VerticalButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		8BCCD5741B9861EA005E619A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8BCCD5791B986712005E619A /* VerticalLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLabel.h; sourceTree = "<group>"; };
 		8BCCD57A1B986712005E619A /* VerticalLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLabel.m; sourceTree = "<group>"; };
+		8BCCD57D1B986864005E619A /* VerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalButton.h; path = VerticalButton/VerticalButton.h; sourceTree = "<group>"; };
+		8BCCD57E1B986864005E619A /* VerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerticalButton.m; path = VerticalButton/VerticalButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 		8BA715151B82D53800D1E3E0 /* VerticalText */ = {
 			isa = PBXGroup;
 			children = (
+				8BCCD57C1B986837005E619A /* VerticalButton */,
 				8BA7153C1B82D54D00D1E3E0 /* VerticalLabel */,
 				8BA7151A1B82D53800D1E3E0 /* AppDelegate.h */,
 				8BA7151B1B82D53800D1E3E0 /* AppDelegate.m */,
@@ -134,6 +138,15 @@
 				8BCCD57A1B986712005E619A /* VerticalLabel.m */,
 			);
 			path = VerticalLabel;
+			sourceTree = "<group>";
+		};
+		8BCCD57C1B986837005E619A /* VerticalButton */ = {
+			isa = PBXGroup;
+			children = (
+				8BCCD57D1B986864005E619A /* VerticalButton.h */,
+				8BCCD57E1B986864005E619A /* VerticalButton.m */,
+			);
+			name = VerticalButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA7151F1B82D53800D1E3E0 /* ViewController.m in Sources */,
+				8BCCD57F1B986864005E619A /* VerticalButton.m in Sources */,
 				8BA7151C1B82D53800D1E3E0 /* AppDelegate.m in Sources */,
 				8BA715191B82D53800D1E3E0 /* main.m in Sources */,
 				8BCCD57B1B986712005E619A /* VerticalLabel.m in Sources */,
