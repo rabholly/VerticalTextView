@@ -50,10 +50,9 @@
 	CGContextTranslateCTM(context, 0, self.bounds.size.height);
 	CGContextScaleCTM(context, 1.0, -1.0);
 	
-	CGFloat centerOffset;
-	CGFloat offset;
-	NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:_text
-																				attributes:@{NSForegroundColorAttributeName: [UIColor clearColor],NSFontAttributeName: _font}];
+	CGFloat centerOffset = 0;
+	CGFloat offset = 0;
+	NSMutableAttributedString *attrStr = [self subStr:_text withLength:self.bounds.size.width];
 	//计算居中的偏移
 	CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
 										options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
@@ -67,7 +66,7 @@
 	//添加中文
 	BOOL totalChinese = true;
 	for (int i = 0; i < attrStr.length; i++) {
-		if ([self isChinese:_text index:i]) {
+		if ([self isChinese:attrStr.string index:i]) {
 			[attrStr addAttributes:@{(id)kCTVerticalFormsAttributeName: @YES,
 									 NSForegroundColorAttributeName: _textColor}
 							 range:NSMakeRange(i, 1)];
@@ -83,7 +82,7 @@
 	
 	//添加非中文
 	for (int i = 0; i < attrStr.length; i++) {
-		if ([self isChinese:_text index:i]) {
+		if ([self isChinese:attrStr.string index:i]) {
 			[attrStr addAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}
 							 range:NSMakeRange(i, 1)];
 		} else {
@@ -96,6 +95,12 @@
 
 - (BOOL)isChinese:(NSString *)s index:(int)index {
 	NSString *subStr = [s substringWithRange:NSMakeRange(index, 1)];
+	NSArray *array = @[@"【", @"】", @"—", @"♯", @"♭", @"（", @"）", @"…"];
+	for (NSString *item in array) {
+		if ([subStr isEqualToString:item]) {
+			return NO;
+		}
+	}
 	const char *cStr = [subStr UTF8String];
 	return strlen(cStr) == 3;
 }
@@ -112,6 +117,22 @@
 	CFRelease(framesetter);
 	CFRelease(frame);
 	CFRelease(path);
+}
+
+- (NSMutableAttributedString *)subStr:(NSString *)str withLength:(CGFloat)length {
+	NSMutableAttributedString *attrStr = [NSMutableAttributedString alloc];
+	for (int i = 1; i< [str length]; i++) {
+		NSString *subStr = [str substringWithRange:NSMakeRange(0, i)];
+		attrStr = [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+		CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
+											   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+											   context:nil];
+		if (strRect.size.height > length) {
+			subStr = [NSString stringWithFormat:@"%@…",[str substringWithRange:NSMakeRange(0, i - 2)]];
+			return [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+		}
+	}
+	return [attrStr initWithString:str attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
 }
 
 @end
