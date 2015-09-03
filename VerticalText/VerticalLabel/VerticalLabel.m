@@ -1,15 +1,15 @@
 //
-//  VerticalTextView.m
-//  VerticalTextView
+//  VerticalLabel.m
+//  VerticalLabel
 //
 //  Created by horry on 15/8/18.
 //  Copyright (c) 2015年 ___horryBear___. All rights reserved.
 //
 
-#import "VerticalTextView.h"
+#import "VerticalLabel.h"
 #import <CoreText/CoreText.h>
 
-@implementation VerticalTextView
+@implementation VerticalLabel
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];

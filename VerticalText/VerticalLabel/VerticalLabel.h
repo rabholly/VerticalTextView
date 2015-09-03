@@ -1,6 +1,6 @@
 //
-//  VerticalTextView.h
-//  VerticalTextView
+//  VerticalLabel.h
+//  VerticalLabel
 //
 //  Created by horry on 15/8/18.
 //  Copyright (c) 2015年 ___horryBear___. All rights reserved.
@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, VerticalTextAligment) {
 	VerticalTextAligmentLeft		//左对齐
 };
 
-@interface VerticalTextView : UIView
+@interface VerticalLabel : UIView
 
 @property(nonatomic, strong) NSString *text;
 @property(nonatomic, strong) UIFont *font;

@@ -14,8 +14,8 @@
 		8BA715241B82D53800D1E3E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA715231B82D53800D1E3E0 /* Images.xcassets */; };
 		8BA715271B82D53800D1E3E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA715251B82D53800D1E3E0 /* LaunchScreen.xib */; };
 		8BA715331B82D53800D1E3E0 /* VerticalTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */; };
-		8BA7153F1B82D59B00D1E3E0 /* VerticalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7153E1B82D59B00D1E3E0 /* VerticalTextView.m */; };
 		8BCCD5751B9861EA005E619A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCCD5741B9861EA005E619A /* Default-568h@2x.png */; };
+		8BCCD57B1B986712005E619A /* VerticalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCD57A1B986712005E619A /* VerticalLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +42,9 @@
 		8BA7152C1B82D53800D1E3E0 /* VerticalTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA715311B82D53800D1E3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA715321B82D53800D1E3E0 /* VerticalTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalTextTests.m; sourceTree = "<group>"; };
-		8BA7153D1B82D59B00D1E3E0 /* VerticalTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalTextView.h; path = VerticalText/VerticalTextView.h; sourceTree = "<group>"; };
-		8BA7153E1B82D59B00D1E3E0 /* VerticalTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerticalTextView.m; path = VerticalText/VerticalTextView.m; sourceTree = "<group>"; };
 		8BCCD5741B9861EA005E619A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BCCD5791B986712005E619A /* VerticalLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLabel.h; sourceTree = "<group>"; };
+		8BCCD57A1B986712005E619A /* VerticalLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 		8BA715151B82D53800D1E3E0 /* VerticalText */ = {
 			isa = PBXGroup;
 			children = (
-				8BA7153C1B82D54D00D1E3E0 /* VerticalText */,
+				8BA7153C1B82D54D00D1E3E0 /* VerticalLabel */,
 				8BA7151A1B82D53800D1E3E0 /* AppDelegate.h */,
 				8BA7151B1B82D53800D1E3E0 /* AppDelegate.m */,
 				8BA7151D1B82D53800D1E3E0 /* ViewController.h */,
@@ -127,13 +127,13 @@
 			path = VerticalTextTests;
 			sourceTree = "<group>";
 		};
-		8BA7153C1B82D54D00D1E3E0 /* VerticalText */ = {
+		8BA7153C1B82D54D00D1E3E0 /* VerticalLabel */ = {
 			isa = PBXGroup;
 			children = (
-				8BA7153D1B82D59B00D1E3E0 /* VerticalTextView.h */,
-				8BA7153E1B82D59B00D1E3E0 /* VerticalTextView.m */,
+				8BCCD5791B986712005E619A /* VerticalLabel.h */,
+				8BCCD57A1B986712005E619A /* VerticalLabel.m */,
 			);
-			name = VerticalText;
+			path = VerticalLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +240,7 @@
 				8BA7151F1B82D53800D1E3E0 /* ViewController.m in Sources */,
 				8BA7151C1B82D53800D1E3E0 /* AppDelegate.m in Sources */,
 				8BA715191B82D53800D1E3E0 /* main.m in Sources */,
-				8BA7153F1B82D59B00D1E3E0 /* VerticalTextView.m in Sources */,
+				8BCCD57B1B986712005E619A /* VerticalLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
