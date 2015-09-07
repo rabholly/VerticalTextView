@@ -55,8 +55,8 @@
 	NSMutableAttributedString *attrStr = [self subStr:_text withLength:self.bounds.size.width];
 	//计算居中的偏移
 	CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
-										options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-										context:nil];
+										   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+										   context:nil];
 	if (_aligment == VerticalTextAligmentCenter) {
 		centerOffset = (self.bounds.size.width - strRect.size.height) / 2;
 	} else {
@@ -105,10 +105,12 @@
 	return strlen(cStr) == 3;
 }
 
-- (void)drawText:(NSMutableAttributedString*)attrStr xOffset:(CGFloat)xOffset withContext:(CGContextRef)context{
+- (void)drawText:(NSMutableAttributedString*)attrStr xOffset:(CGFloat)xOffset withContext:(CGContextRef)context {
 	CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attrStr);
 	CGMutablePathRef path = CGPathCreateMutable();
-	CGPathAddRect(path, NULL, CGRectMake(self.bounds.origin.x + xOffset , self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height));
+	CGRect pathFrame = self.bounds;
+	pathFrame.origin.x  += xOffset;
+	CGPathAddRect(path, NULL, pathFrame);
 	CTFrameRef frame = CTFramesetterCreateFrame(framesetter,
 												CFRangeMake(0, 0),
 												path,
@@ -121,7 +123,14 @@
 
 - (NSMutableAttributedString *)subStr:(NSString *)str withLength:(CGFloat)length {
 	NSMutableAttributedString *attrStr = [NSMutableAttributedString alloc];
-	for (int i = 1; i< [str length]; i++) {
+	attrStr = [attrStr initWithString:str attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+	CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
+										   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+										   context:nil];
+	if (strRect.size.height < length) {
+		return attrStr;
+	}
+	for (int i = 1; i <= [str length]; i++) {
 		NSString *subStr = [str substringWithRange:NSMakeRange(0, i)];
 		attrStr = [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
 		CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
