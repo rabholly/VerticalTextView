@@ -123,25 +123,27 @@
 
 - (NSMutableAttributedString *)subStr:(NSString *)str withLength:(CGFloat)length {
 	NSMutableAttributedString *attrStr = [NSMutableAttributedString alloc];
-	attrStr = [attrStr initWithString:str attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
-	CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
-										   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-										   context:nil];
-	if (strRect.size.height < length) {
+	NSString *resultStr = str;
+	CGRect baseRect = [self attrStr:attrStr frameForSpecialString:str];
+	if (baseRect.size.height < length) {
 		return attrStr;
 	}
 	for (int i = 1; i <= [str length]; i++) {
 		NSString *subStr = [str substringWithRange:NSMakeRange(0, i)];
-		attrStr = [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
-		CGRect strRect = [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
-											   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-											   context:nil];
-		if (strRect.size.height > length) {
-			subStr = [NSString stringWithFormat:@" %@…",[str substringWithRange:NSMakeRange(0, i - 3)]];
-			return [attrStr initWithString:subStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+		CGRect strRect = [self attrStr:attrStr frameForSpecialString:subStr];;
+		if (strRect.size.height > length && i > 3) {
+			resultStr = [NSString stringWithFormat:@" %@…",[str substringWithRange:NSMakeRange(0, i - 3)]];
+			break;
 		}
 	}
-	return [attrStr initWithString:str attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+	return [attrStr initWithString:resultStr attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+}
+
+- (CGRect)attrStr:(NSMutableAttributedString*)attrStr frameForSpecialString:(NSString *)str {
+	attrStr = [attrStr initWithString:str attributes:@{NSForegroundColorAttributeName: [UIColor clearColor], NSFontAttributeName: _font}];
+	return [attrStr boundingRectWithSize:CGSizeMake(self.bounds.size.height, MAXFLOAT)
+										   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+										   context:nil];
 }
 
 @end
